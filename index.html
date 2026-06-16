@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0065)file:///C:/Users/Kimberly/Downloads/registro_memos_rrhh_v3_4.html -->
+<!-- saved from url=(0065)file:///C:/Users/Kimberly/Downloads/registro_memos_rrhh_v3_5.html -->
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -230,14 +230,14 @@ canvas{max-width:100%}
       <div class="nav-label">Análisis</div>
       <button class="nav-link" onclick="switchTab(&#39;historial&#39;)"><i class="ti ti-user-search"></i> Historial por empleado</button>
       <button class="nav-link" onclick="switchTab(&#39;estadisticas&#39;)"><i class="ti ti-chart-bar"></i> Estadísticas</button>
-      <button class="nav-link" onclick="switchTab(&#39;alertas&#39;)"><i class="ti ti-bell"></i> Alertas <span class="badge-count" id="badge-alertas">0</span></button>
+      <button class="nav-link" onclick="switchTab(&#39;alertas&#39;)"><i class="ti ti-bell"></i> Alertas <span class="badge-count" id="badge-alertas">1</span></button>
       <div class="nav-label">Personal</div>
       <button class="nav-link" onclick="switchTab(&#39;baja&#39;)"><i class="ti ti-user-minus"></i> Dar de baja</button>
       <button class="nav-link" onclick="switchTab(&#39;excolaboradores&#39;)"><i class="ti ti-archive"></i> Ex colaboradores</button>
       <div class="nav-label">Exportar</div>
       <button class="nav-link" onclick="switchTab(&#39;exportar&#39;)"><i class="ti ti-download"></i> Exportar datos</button>
     </nav>
-    <div class="sidebar-footer">Sistema RRHH v3.0<br><span id="footer-date"></span></div>
+    <div class="sidebar-footer">Sistema RRHH v3.0<br><span id="footer-date">16/6/2026</span></div>
   </aside>
 
   <!-- MAIN -->
@@ -245,7 +245,7 @@ canvas{max-width:100%}
     <header class="topbar">
       <span class="topbar-title" id="topbar-title">Resumen</span>
       <div class="topbar-right">
-        <span class="topbar-date" id="topbar-date"></span>
+        <span class="topbar-date" id="topbar-date">martes, 16 de junio de 2026</span>
         <button class="btn btn-secondary btn-sm" onclick="switchTab(&#39;exportar&#39;)"><i class="ti ti-download"></i> Exportar</button>
         <button class="btn btn-primary btn-sm" onclick="switchTab(&#39;nuevo&#39;)"><i class="ti ti-plus"></i> Nuevo memo</button>
       </div>
@@ -255,18 +255,71 @@ canvas{max-width:100%}
 
       <!-- DASHBOARD -->
       <div class="section active" id="tab-dashboard">
-        <div class="stats-grid" id="stats-grid"></div>
+        <div class="stats-grid" id="stats-grid">
+    <div class="stat-card"><div class="stat-label">Total memos</div><div class="stat-value">7</div><div class="stat-sub">Registros activos</div></div>
+    <div class="stat-card danger"><div class="stat-label">Amonestaciones</div><div class="stat-value">4</div><div class="stat-sub">Acciones disciplinarias</div></div>
+    <div class="stat-card warning"><div class="stat-label">Pend. de firma</div><div class="stat-value">0</div><div class="stat-sub">Requieren seguimiento</div></div>
+    <div class="stat-card success"><div class="stat-label">Reconocimientos</div><div class="stat-value">0</div><div class="stat-sub">Logros destacados</div></div>
+  </div>
         <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:1rem">
           <div class="card">
             <div class="card-header">
               <span class="card-title">Memos recientes</span>
               <button class="btn btn-secondary btn-sm" onclick="switchTab(&#39;registro&#39;)">Ver todos <i class="ti ti-arrow-right"></i></button>
             </div>
-            <div style="padding:0 1.5rem" id="recent-list"></div>
+            <div style="padding:0 1.5rem" id="recent-list">
+    <div class="recent-item">
+      <div class="recent-dot" style="background:#B91C1C"></div>
+      <div class="recent-info">
+        <div class="recent-name">Balla Avalos Wilmer Fabian</div>
+        <div class="recent-meta">MEMO-2026-021 · 01/06/2026</div>
+      </div>
+      <div><span class="badge badge-danger">Amonestación</span></div>
+    </div>
+    <div class="recent-item">
+      <div class="recent-dot" style="background:#B91C1C"></div>
+      <div class="recent-info">
+        <div class="recent-name">Balla Avalos Wilmer Fabian</div>
+        <div class="recent-meta">MEMO-2026-018 · 26/05/2026</div>
+      </div>
+      <div><span class="badge badge-danger">Amonestación</span></div>
+    </div>
+    <div class="recent-item">
+      <div class="recent-dot" style="background:#B91C1C"></div>
+      <div class="recent-info">
+        <div class="recent-name">Alarcon Moreano Henry Gabriel</div>
+        <div class="recent-meta">MEMO-2026-012 · 09/05/2026</div>
+      </div>
+      <div><span class="badge badge-danger">Amonestación</span></div>
+    </div>
+    <div class="recent-item">
+      <div class="recent-dot" style="background:#92400E"></div>
+      <div class="recent-info">
+        <div class="recent-name">Martinez Martinez Israel Fernando</div>
+        <div class="recent-meta">MEMO-2026-013 · 17/04/2026</div>
+      </div>
+      <div><span class="badge badge-warning">Llamado de atención</span></div>
+    </div>
+    <div class="recent-item">
+      <div class="recent-dot" style="background:#92400E"></div>
+      <div class="recent-info">
+        <div class="recent-name">Castañeda Lara Danny Israel</div>
+        <div class="recent-meta">MEMO-2026-014 · 30/03/2026</div>
+      </div>
+      <div><span class="badge badge-warning">Llamado de atención</span></div>
+    </div></div>
           </div>
           <div class="card">
             <div class="card-header"><span class="card-title">Por tipo</span></div>
-            <div style="padding:1rem 1.5rem" id="tipo-breakdown"></div>
+            <div style="padding:1rem 1.5rem" id="tipo-breakdown">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">
+      <div style="display:flex;align-items:center;gap:8px"><div style="width:8px;height:8px;border-radius:50%;background:#B91C1C"></div>Amonestación</div>
+      <span style="font-family:var(--mono);font-weight:600">4</span>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">
+      <div style="display:flex;align-items:center;gap:8px"><div style="width:8px;height:8px;border-radius:50%;background:#92400E"></div>Llamado de atención</div>
+      <span style="font-family:var(--mono);font-weight:600">3</span>
+    </div></div>
           </div>
         </div>
       </div>
@@ -705,10 +758,10 @@ canvas{max-width:100%}
   </div>
 </div>
 
-<div class="toast" id="toast"></div>
-<div id="loading-bar" style="display:none;position:fixed;top:0;left:0;right:0;z-index:999;background:var(--accent);color:#fff;padding:10px 20px;font-size:13px;font-weight:500;display:none;align-items:center;gap:10px">
+<div class="toast error" id="toast">Sin conexión — mostrando datos locales.</div>
+<div id="loading-bar" style="position: fixed; top: 0px; left: 0px; right: 0px; z-index: 999; background: var(--accent); color: rgb(255, 255, 255); padding: 10px 20px; font-size: 13px; font-weight: 500; align-items: center; gap: 10px; display: none;">
   <i class="ti ti-refresh" style="animation:spin 1s linear infinite"></i>
-  <span id="loading-msg">Cargando...</span>
+  <span id="loading-msg">Conectando con Google Sheets...</span>
 </div>
 <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
 
@@ -827,6 +880,8 @@ function riskLevel(emp){
   if(disc===1)return{label:'Bajo',color:'#1D4ED8',pct:25};
   return{label:'Sin riesgo',color:'#166534',pct:0};
 }
+
+function switchTab(name){
   pendientesOnly=false;
   document.querySelectorAll('.nav-link').forEach(l=>l.classList.remove('active'));
   const navMap={dashboard:0,nuevo:1,registro:2,historial:4,estadisticas:5,alertas:6,baja:8,excolaboradores:9,exportar:11};
